@@ -11,22 +11,23 @@
     height: var(--header-height);
 
     text-align: center;
-    font-size: 5.5rem;
+    font-size: 5rem;
     font-weight: 700;
 
     background-image: url(../img/wall.png);
-    padding: 1rem 0;
+    padding: 1.6rem 0;
     margin: 0;
   }
 
   .my-desk {
     background-image: url(../img/cork.png);
     height: calc(100vh - var(--header-height));
+    overflow: scroll;
   }
 
   .my-card {
     margin: 0 auto;
-    width: 380px;
+    width: 350px;
     background-color: white;
     padding: 15px;
   }
@@ -43,3 +44,15 @@
 /* .date {
     font-family: "Sometype Mono", monospace;
 } */
+
+
+@media screen and (min-width: 768px) {
+    .main-title {
+        font-size: 6rem;
+        padding: 0.8rem 0;
+    }
+
+    .my-card {
+        width: 100%;
+    }
+}
