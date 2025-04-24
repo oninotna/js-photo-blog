@@ -27,13 +27,16 @@
 
   .my-card {
     margin: 0 auto;
-    width: 350px;
+    max-width: 350px;
     background-color: white;
     padding: 15px;
   }
 
   .img-my-card {
     width: 100%;
+    aspect-ratio: 1;
+    background-size: cover;
+    background-position: bottom;
   }
 
   .description-img-my-card {
