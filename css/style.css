@@ -1,0 +1,29 @@
+:root {
+    --header-height: 140px;
+}
+.edu-tas-beginner {
+    font-family: "Edu TAS Beginner", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  .main-title {
+    height: var(--header-height);
+
+    text-align: center;
+    font-size: 5.5rem;
+    font-weight: 700;
+
+    background-image: url(../img/wall.png);
+    padding: 1rem 0;
+    margin: 0;
+  }
+
+  .my-desk {
+    background-image: url(../img/cork.png);
+    height: calc(100vh - var(--header-height));
+  }
+
+/* .date {
+    font-family: "Sometype Mono", monospace;
+} */
