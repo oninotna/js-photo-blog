@@ -36,17 +36,18 @@
     width: 100%;
     aspect-ratio: 1;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
   }
 
   .description-img-my-card {
-    margin: 15px 0;
+    margin: 10px 0;
     font-size: 1.5rem;
   }
 
-/* .date {
+.date {
     font-family: "Sometype Mono", monospace;
-} */
+    margin: 10px 0;
+}
 
 
 @media screen and (min-width: 768px) {
