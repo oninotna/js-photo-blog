@@ -30,6 +30,15 @@
     max-width: 350px;
     background-color: white;
     padding: 15px;
+
+    position: relative;
+  }
+
+  .pin-card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .img-my-card {
