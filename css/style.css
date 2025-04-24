@@ -24,6 +24,22 @@
     height: calc(100vh - var(--header-height));
   }
 
+  .my-card {
+    margin: 0 auto;
+    width: 380px;
+    background-color: white;
+    padding: 15px;
+  }
+
+  .img-my-card {
+    width: 100%;
+  }
+
+  .description-img-my-card {
+    margin: 15px 0;
+    font-size: 1.5rem;
+  }
+
 /* .date {
     font-family: "Sometype Mono", monospace;
 } */
