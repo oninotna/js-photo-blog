@@ -1,18 +1,21 @@
-// CHIAMATA AJAX
-apiUri = 'https://lanciweb.github.io/demo/api/pictures/';
+// SALVATAGGIO API IN UNA COSTANTE
+const apiUri = 'https://lanciweb.github.io/demo/api/pictures/';
 
-// DOM ELEMENT
+// RICHIAMO ELEMENTO DOM IN CUI INSERIRE SUCCESSIVAMENTE LE CARD 
 const cardsContainer = document.querySelector(".cards-row");
 
-// VARIABLES
+// VARIABILE CHE CI SERVIRA' SUCCESSIVAMENTE PER LA CREAZIONE DEI CODICE HTML
 let listCard = "";
 
-
+// CHIAMATA AJAX ALL'API SOPRA MENZIONATA
 axios.get(apiUri)
 .then(response => {
-    imgDataList = response.data;
+    // COSTANTE A CUI ASSEGNAMO LA CHIAVE DATA DELL'OGGETTO
+    const imgDataList = response.data;
 
+    // CICLO CHE CI PERMETTE DI INSERIRE IL CODICE HTML PER OGNI OGGETTO ALL'INTERNO DI UNA STRINGA 
     imgDataList.forEach(element => {
+        // DESTRUTTURAZIONE DELL'OGGETTO
         const {date, title, id, url} = element;
         listCard += 
         `<div class="col-12 col-md-6 col-lg-4 mb-4 card-col">
@@ -25,6 +28,7 @@ axios.get(apiUri)
         </div>`;
     });
 
+    // CREAZIONE DELLE VARIE CARD IN HTML
     cardsContainer.innerHTML = listCard;
 
     const cards = cardsContainer.querySelectorAll(".my-card");
@@ -37,11 +41,17 @@ axios.get(apiUri)
 
        let isZoomed = false;
    
-       card.addEventListener("click", () => {
+       card.addEventListener("click", (event) => {
+           if (isZoomed) {
+            event.stopPropagation()
+            return;
+           }
+
            overlay.append(card);
            pinCard.style.display = "none";
            card.style = "top: 50%";
            card.style.transform = "translate(0, -50%) scale(1.5)";
+           card.style.transition = "1s";
            overlay.style.display = "block";
 
            isZoomed = true;
